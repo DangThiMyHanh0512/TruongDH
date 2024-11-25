@@ -1,0 +1,21 @@
+:root {
+    --white-color: white;
+    --black-color: black;
+    --font-color-title: #8F2526;
+    --font-color-heading: #1E246D;
+}
+* {
+    box-sizing: inherit;
+}
+.grid {
+    width: 1300px;
+    max-width: 2000%;
+    margin: 0 auto;
+}
+.grid___full-width {
+    width: 100%;
+}
+.grid___row {
+    display: flex;
+    flex-wrap: wrap;
+}

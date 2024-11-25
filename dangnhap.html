@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/dangnhap.css">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <hr>
+    <div class="login-container">
+        <div class="login-container-left">
+            <form class="form-login">
+                <h1>Đăng nhập</h1>
+                <div class="form-text">
+                    <div class="wrap-input100 validate-input login-validate-input" data-validate="Valid email is required: user@gmail.com">
+                        <input class="input100" type="text" name="email" id="loginModalEmail" placeholder="Email" autocomplete="off" style="width: 250px; height: 40px;">
+                        <span class="foucus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fas fa-envelope" aria-hidden="true">
+                            </i>
+                        </span>
+                    </div>
+                <div class="form-text">
+                    <div class="wrap-input100 validate-input login-validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" id="loginModalPassword" placeholder="Mật khẩu" style="width: 250px; height: 40px;">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100"><i class="fas fa-unlock" style="transform: translateX(-1500%);" aria-hidden="true">
+                        </i>
+                    </span>
+                </div>
+                <button style="background-color: #2B92CF; margin: 30px 20px 5px 20px; margin-left: 27px; width: 250px;"><a href="bai1.html">Đăng nhập</a></button>
+                <span style="margin: 5px;"><a href="" style="color: rgb(79, 79, 79);">Quên mật khẩu?</a></span>
+                <div class="auth-form__aside">
+                    <button type="button" class="auth-form__btn" data-dismiss="modal"><a href="bai1.html">Đóng</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        const formLogin = document.querySelectorAll('.form-text input')
+        const formLabel = document.querySelectorAll('.form-text label')
+        for (let i = 0; i < 2; i++) {
+            formLogin[i].addEventListener('mouseover', function() {
+                formLabel[i].classList.add("focus")
+            })
+            formLogin[i].addEventListener('mouseout', function() {
+                if (formLogin[i].value == "") {
+                    formLabel[i].classList.remove("focus")
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
